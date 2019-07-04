@@ -2,10 +2,22 @@
 @import "~@angular/material/theming";
 @include mat-core();
 
-//@import "./assets/my-theme.scss";
-$theme-primary: mat-palette($mat-teal, 300);
+$mat-violet: (
+  50: #893f55,
+  100: #59122C,
+  200: #2f0000,
+  contrast: (
+    50: white,
+    100: white,
+    200: white,
+   
+  )
+);
 
-$theme-accent: mat-palette($mat-teal, A200, A100, A400);
+//@import "./assets/my-theme.scss";
+$theme-primary: mat-palette($mat-violet, 100);
+
+$theme-accent: mat-palette($mat-violet, 50);
 
 $theme-warn: mat-palette($mat-red);
 
@@ -19,4 +31,16 @@ $theme-theme: mat-light-theme(
 
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+   margin: 0;
+   font-family: Roboto, "Helvetica Neue", sans-serif; 
+   background-color: rgb(255, 253, 251)
+  }
+
+.mat-card{
+  margin: 5%;
+}
+
+hr.dashed{
+    border-top: 1px dashed red;
+}

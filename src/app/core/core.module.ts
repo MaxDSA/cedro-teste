@@ -1,16 +1,16 @@
-import { NgModule } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
-import { MatToolbarModule } from '@angular/material';
+import { MatToolbarModule, MatCardModule } from '@angular/material';
+import { NgModule } from '@angular/core';
 
 @NgModule({
     declarations: [
-        HeaderComponent
+        HeaderComponent,
     ],
     imports: [
-        MatToolbarModule
+        MatToolbarModule,
     ],
     exports:[
-        HeaderComponent
+        HeaderComponent,
     ],
     providers: [],
 })
