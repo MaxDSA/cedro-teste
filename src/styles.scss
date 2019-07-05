@@ -1,16 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/theming";
+@import url("https://fonts.googleapis.com/css?family=Varela+Round&display=swap");
+
 @include mat-core();
 
 $mat-violet: (
   50: #893f55,
-  100: #59122C,
+  100: #59122c,
   200: #2f0000,
   contrast: (
     50: white,
     100: white,
-    200: white,
-   
+    200: white
   )
 );
 
@@ -21,26 +22,65 @@ $theme-accent: mat-palette($mat-violet, 50);
 
 $theme-warn: mat-palette($mat-red);
 
-$theme-theme: mat-light-theme(
-    $theme-primary,
-    $theme-accent, 
-    $theme-warn
-);
+$theme-theme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
 
 @include angular-material-theme($theme-theme);
 
-
-html, body { height: 100%; }
+html,
 body {
-   margin: 0;
-   font-family: Roboto, "Helvetica Neue", sans-serif; 
-   background-color: rgb(255, 253, 251)
-  }
-
-.mat-card{
-  margin: 5%;
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Varela Round", sans-serif;
+  background-color: rgb(221, 216, 210);
 }
 
-hr.dashed{
-    border-top: 1px dashed red;
+.mat-card {
+  margin: 5% 15%;
+  font-family: "Varela Round", sans-serif;
+}
+
+hr.dashed {
+  border-top: 1px dashed #59122c;
+}
+
+.title {
+  color: #59122c;
+  text-align: center;
+
+  h4 {
+    font-weight: 600;
+    margin-top: 0;
+  }
+}
+
+.mat-radio-button {
+  margin: 0 1rem;
+  font-size: 10px;
+  max-width: 28%;
+  font-family: "Varela Round", 'Roboto';
+
+  .mat-radio-label {
+    white-space: unset !important;
+    text-transform: uppercase;
+
+    .mat-radio-label-content {
+      word-break: normal !important;
+    }
+  }
+}
+
+.mat-select-placeholder{
+  font-size: 11px;
+  font-family: "Varela Round", 'Roboto' !important;
+}
+
+.mat-select{
+  font-size: 11px;
+  font-family: "Varela Round", 'Roboto';
+}
+
+.mat-form-field-wrapper{
+  width: 300px;
 }

@@ -8,13 +8,15 @@ import { MatDialogRef } from '@angular/material';
 })
 export class TermosDeUsoComponent implements OnInit {
 
+  accept: boolean = false;
+
   constructor(
     public dialogRef: MatDialogRef<TermosDeUsoComponent>) {}
 
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
   ngOnInit() {
   }
 
+  close(): void {
+    this.dialogRef.close();
+  }
 }

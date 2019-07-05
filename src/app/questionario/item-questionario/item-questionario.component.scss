@@ -1,0 +1,44 @@
+.question-title {
+  display: block;
+  text-align: justify;
+  font-size: 14px;
+  margin: 1.5rem auto 2rem;
+  width: 65%
+}
+
+.itens {
+  margin-bottom: 2rem;
+  font-size: 12px;
+
+  .mat-radio-group{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    .mat-radio-button{
+      width: 33%;
+    }
+  }
+}
+
+
+.select-title{
+  margin: 0 auto 1rem;
+  color: #59122c;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.select-ctn{
+  margin: 1rem auto;
+  width: 50%;
+  text-align: center
+}
+
+.select-gp{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+

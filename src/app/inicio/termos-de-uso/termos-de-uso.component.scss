@@ -1,9 +1,35 @@
-.title{
-    color: #59122C;
-    text-align: center;
+.close-btn{
+    position: relative;
+    bottom: 10px;
+    left: 96%;
+     &:hover{
+         cursor: pointer;
+     }
 }
 
 .text{
-    //font-size: 12px;
+    font-size: 15px;
     font-weight: 600;
+}
+
+.footer{
+    font-size: 12px;
+    text-align: center;
+    margin: 1.5rem;
+
+    .accept{
+        display: block;
+    }
+
+    .confirm{
+        margin-top: 1.5rem;
+        color: white;
+        background-color: #ffab00;
+
+        &:disabled{
+            opacity: 0.5;
+        }
+    }
+
+
 }

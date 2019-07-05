@@ -1,0 +1,37 @@
+.title {
+  margin: 1rem 0 3rem;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.question-title {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  margin: 1.5rem 0 2rem;
+}
+
+button {
+  margin-right: 1rem;
+  border: 1px solid;
+  width: 20%;
+}
+
+.confirm {
+  color: white;
+  background-color: #ffab00;
+  border: 1px solid #ffab00;
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+.btn-group{
+  margin-top: 3rem;
+  position: relative;
+  left: 60%;
+}

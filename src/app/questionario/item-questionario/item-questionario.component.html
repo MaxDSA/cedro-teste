@@ -1,0 +1,44 @@
+<form #f="ngForm">
+
+  <div class="question" *ngIf='question.radioQuestion'>
+    <span class="question-title">
+      {{question.index}} - {{question.question}}
+    </span>
+
+    <div class="itens">
+      <mat-radio-group required>
+        <mat-radio-button *ngFor='let item of question.itens' [value]="item.value" (change)='observeForm(question, $event.value)'>
+          {{item.description}}
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <hr class="dashed" />
+  </div>
+
+
+
+
+  <div class="question" *ngIf='!question.radioQuestion'>
+    <span class="question-title">
+      {{question.index}} - {{question.question}}
+    </span>
+
+    <div class="select-gp">
+
+      <div class="select-ctn" *ngFor='let q of question.selectQuestions'>
+        <span class='select-title'>{{q.question}}</span>
+        <mat-form-field>
+          <mat-select required (selectionChange)='observeForm(question, $event.target.value)'>
+            <mat-option *ngFor="let o of q.selectOptions" [value]="o.value">
+              {{o.description}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+    </div>
+
+  </div>
+
+</form>

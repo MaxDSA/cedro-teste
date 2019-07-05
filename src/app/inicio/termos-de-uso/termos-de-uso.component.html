@@ -1,5 +1,6 @@
+<mat-icon class="close-btn" color='primary' (click)='close()'>cancel</mat-icon>
 <div class="title">
-  <h4>Termo</h4>
+  <h4>TERMO</h4>
 </div>
 
 <div class="text">
@@ -8,9 +9,9 @@
     type</p>
 </div>
 
-<hr class="dashed"/>
+<hr class="dashed" />
 
 <div class="footer">
-  <mat-checkbox>Li e aceito os termos e condições acima</mat-checkbox>
-  <button mat-button>OK ENTENDI</button>
+  <mat-checkbox class="accept" [(ngModel)]='accept'>Li e aceito os termos e condições acima</mat-checkbox>
+  <button mat-button class="confirm" [disabled]='!accept'>OK ENTENDI</button>
 </div>
