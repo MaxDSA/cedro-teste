@@ -1,10 +1,11 @@
-import { FormsModule } from '@angular/forms';
-import { ItemQuestionarioComponent } from './item-questionario/item-questionario.component';
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { QuestionarioComponent } from './questionario.component';
-import { MatRadioModule, MatSelectModule, MatButtonModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MatRadioModule, MatSelectModule, MatButtonModule } from '@angular/material';
+import { NgModule } from '@angular/core';
+
+import { ItemQuestionarioComponent } from './item-questionario/item-questionario.component';
+import { QuestionarioComponent } from './questionario.component';
 
 @NgModule({
   declarations: [

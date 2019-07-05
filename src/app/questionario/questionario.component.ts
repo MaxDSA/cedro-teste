@@ -1,7 +1,9 @@
-import { QuestionarioService } from './questionario.service';
-import { Question } from './../core/models/question';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
+import { DataShareService } from '../core/data-share.service';
+import { Question } from './../core/models/question';
+import { QuestionarioService } from './questionario.service';
 
 @Component({
   selector: 'app-questionario',
@@ -10,9 +12,13 @@ import { Router } from '@angular/router';
 })
 export class QuestionarioComponent implements OnInit {
 
-  questionsList: any[] = new Array()
-  constructor(private service:QuestionarioService,
-    private router: Router) { }
+  questionsList: Question[] = new Array()
+
+  constructor(
+    private service:QuestionarioService,
+    private router: Router,
+    private dataShareService: DataShareService
+    ) { }
 
   ngOnInit() {
 
@@ -48,4 +54,8 @@ export class QuestionarioComponent implements OnInit {
     this.router.navigate(["/"])
   }
 
+  save(){
+    this.dataShareService.setData(this.questionsList)
+    this.router.navigate(['/final'])
+  }
 }

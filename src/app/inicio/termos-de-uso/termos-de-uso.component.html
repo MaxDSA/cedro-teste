@@ -13,5 +13,5 @@
 
 <div class="footer">
   <mat-checkbox class="accept" [(ngModel)]='accept'>Li e aceito os termos e condições acima</mat-checkbox>
-  <button mat-button class="confirm" [disabled]='!accept'>OK ENTENDI</button>
+  <button mat-button class="confirm" [disabled]='!accept' routerLink='/final' (click)='close()'>OK ENTENDI</button>
 </div>

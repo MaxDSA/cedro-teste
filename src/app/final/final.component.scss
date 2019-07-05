@@ -1,0 +1,48 @@
+.title {
+  margin: 1rem 0 3rem;
+  color: goldenrod;
+  font-weight: 500;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.icon {
+  display: block;
+  text-align: center;
+  .mat-icon {
+    font-size: 60px;
+    width: 60px;
+    color: goldenrod;
+  }
+}
+
+.title-answer{
+  h4{
+    color: #59122c;
+  }
+}
+
+.message {
+  width: 100%;
+  text-align: center;
+
+  .text {
+    font-size: 15px;
+    //color: #59122c;
+  }
+
+  button {
+    margin: 1rem auto;
+    border: 1px solid;
+    width: 20%;
+  }
+
+  .confirm {
+    color: white;
+    background-color: goldenrod;
+    border: 1px solid goldenrod;
+  }
+}

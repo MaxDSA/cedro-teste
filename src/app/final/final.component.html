@@ -1,0 +1,31 @@
+<div class="container">
+
+  <div class='icon'>
+    <mat-icon>
+      check_circle
+    </mat-icon>
+  </div>
+
+  <div class="title">
+    <h3>Cadastro Concluído!</h3>
+  </div>
+
+  <div *ngIf='questionsList.length > 0'>
+    <div class="title-answer">
+      <h4>Suas Respostas</h4>
+    </div>
+    <app-item-resposta *ngFor='let question of questionsList' [question]='question'></app-item-resposta>
+  </div>
+
+  <div class="message" *ngIf='questionsList.length < 1'>
+
+    <p class="text">
+      Porém, ainda não temos informações sobre seu perfil de investidor. <br />
+      Caso deseje responder o questionário, clique no botão abaixo.
+    </p>
+
+    <button mat-button class="confirm" (click)='back()'>Responder</button>
+
+  </div>
+
+</div>

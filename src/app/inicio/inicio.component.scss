@@ -1,18 +1,34 @@
-.text{
+.icon {
+    display: block;
     text-align: center;
+  .mat-icon {
+    font-size: 60px;
+    width: 60px;
+    color: goldenrod
+  }
 }
 
-.question{
-    text-align: center;
-    margin-top: 3rem;
+.text {
+  text-align: center;
 
-    p{
-        font-weight: 500
-    }
+  .title {
+    margin: 1rem 0 3rem;
+    color: goldenrod;
+    font-weight: 500;
+  }
+}
 
-    button{
-        margin-right: 1rem;
-        border: 1px solid;   
-        width: 10%     
-    }
+.question {
+  text-align: center;
+  margin-top: 3rem;
+
+  p {
+    font-weight: 500;
+  }
+
+  button {
+    margin-right: 1rem;
+    border: 1px solid;
+    width: 10%;
+  }
 }

@@ -1,27 +1,29 @@
-import { QuestionarioModule } from './questionario/questionario.module';
-import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { MatCardModule, MatButtonModule, MatDialogModule, MatCheckboxModule, MatIconModule } from '@angular/material';
 import { NgModule } from '@angular/core';
 
+import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { MatCardModule, MatButtonModule, MatDialogModule, MatCheckboxModule, MatIconModule } from '@angular/material';
+import { FinalModule } from './final/final.module';
 import { InicioComponent } from './inicio/inicio.component';
+import { QuestionarioModule } from './questionario/questionario.module';
 import { TermosDeUsoComponent } from './inicio/termos-de-uso/termos-de-uso.component';
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
    declarations: [
       AppComponent,
       InicioComponent,
-      TermosDeUsoComponent
+      TermosDeUsoComponent,
    ],
    imports: [
       AppRoutingModule,
       BrowserModule,
       BrowserAnimationsModule,
       CoreModule,
+      FinalModule,
       FormsModule,
       MatButtonModule,
       MatCardModule,
@@ -34,7 +36,7 @@ import { FormsModule } from '@angular/forms';
    bootstrap: [
       AppComponent
    ],
-   entryComponents:[
+   entryComponents: [
       TermosDeUsoComponent
    ]
 })

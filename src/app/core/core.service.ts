@@ -27,27 +27,4 @@ export class CoreService {
         return this.http.get(this.base_api + `${path}`, { headers: this.setHeaders(), params: params })
     }
 
-    put(path: string, body: Object = {}): Observable<any> {
-        return this.http.put(
-            this.base_api + `${path}`,
-            JSON.stringify(body),
-            { headers: this.setHeaders() }
-        )
-    }
-
-    post(path: string, body: Object = {}): Observable<any> {
-        return this.http.post(
-            this.base_api + `${path}`,
-            JSON.stringify(body),
-            { headers: this.setHeaders() }
-        )
-    }
-
-    delete(path): Observable<any> {
-        return this.http.delete(
-            this.base_api + `${path}`,
-            { headers: this.setHeaders() }
-        )
-    }
-
 }

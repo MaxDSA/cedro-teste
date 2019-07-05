@@ -1,5 +1,6 @@
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 import { Question } from './../../core/models/question';
-import { Component, OnInit, Input, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-item-questionario',
@@ -10,8 +11,6 @@ export class ItemQuestionarioComponent implements OnInit {
 
   @Input('question')
   question: Question
-
-  @ViewChild('f', {static: false}) form: ElementRef;
 
   @Output() response = new EventEmitter()
 
