@@ -1,5 +1,5 @@
 import { Question } from './../../core/models/question';
-import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-item-questionario',
@@ -13,14 +13,21 @@ export class ItemQuestionarioComponent implements OnInit {
 
   @ViewChild('f', {static: false}) form: ElementRef;
 
+  @Output() response = new EventEmitter()
+
   constructor() { }
 
   ngOnInit() {
     
   }
 
-  observeForm(question:Question, v: number){
-    question.response = v
+  observeForm(question:Question, v: number, selectQuestion?: string){
+    if(question.radioQuestion){
+      question.response = v
+    }else{
+      question.selectQuestions.find(x => x.question === selectQuestion).response = v
+    }
+    this.response.emit(question)
   }
 
 }

@@ -4,11 +4,11 @@
         <h4>PERFIL DO INVESTIDOR - QUESTIONÁRIO</h4>
     </div>
 
-    <app-item-questionario *ngFor='let question of questionsList' [question]='question'></app-item-questionario>
+    <app-item-questionario *ngFor='let question of questionsList' [question]='question' (response)="reciverFeedback($event)"></app-item-questionario>
 
     <div class="btn-group">
-        <button mat-button color='primary'>Voltar</button>
-        <button mat-button class="confirm">Salvar</button>
+        <button mat-button color='primary' (click)=back()>Voltar</button>
+        <button mat-button class="confirm" [disabled]='!isValid()'>Salvar</button>
     </div>
 
 </div>

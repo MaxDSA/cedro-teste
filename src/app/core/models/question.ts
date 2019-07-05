@@ -11,6 +11,7 @@ export class Question {
   }[]
 
   selectQuestions: {
+    response: number
     question: string
     selectOptions: {
       value: number

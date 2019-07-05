@@ -29,7 +29,7 @@
       <div class="select-ctn" *ngFor='let q of question.selectQuestions'>
         <span class='select-title'>{{q.question}}</span>
         <mat-form-field>
-          <mat-select required (selectionChange)='observeForm(question, $event.target.value)'>
+          <mat-select required (selectionChange)='observeForm(question, $event.value, q.question)'>
             <mat-option *ngFor="let o of q.selectOptions" [value]="o.value">
               {{o.description}}
             </mat-option>
